@@ -21,7 +21,7 @@ public class AddStudentServlet extends HttpServlet {
 	public void init() {
 		try { 
 			Class.forName("org.mariadb.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mariadb://mariadb.vamk.fi/e2101083_java_server","e2101083","9SbjzjcK6hQ");
+			conn = DriverManager.getConnection("jdbc:mariadb://mariadb.vamk.fi/e2101083_java_server","e2101083","");
 			ps = conn.prepareStatement("INSERT INTO student VALUES (?, ?, ?)");
 		} catch(SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
